@@ -1,3 +1,4 @@
+% !TEX program = xelatex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Medium Length Professional CV
 % LaTeX Template
@@ -16,218 +17,215 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\documentclass{resume}
 
-\documentclass{resume} % Use the custom resume.cls style
-
-\usepackage[left=0.75in,top=0.5in,right=0.75in,bottom=0.5in]{geometry} % Document margins
+\usepackage[left=0.75in,top=0.5in,right=0.75in,bottom=0.5in]{geometry}
+\usepackage[UTF8,fontset=none]{ctex}
+\setCJKmainfont[AutoFakeBold=2.5,AutoFakeSlant=0.2]{AR PL UMing CN}
+\setCJKsansfont[AutoFakeBold=2.5,AutoFakeSlant=0.2]{AR PL UMing CN}
+\setCJKmonofont{AR PL UMing CN}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
-% \fancyfoot[C]{Page \thepage}
+% \fancyfoot[C]{第 \thepage 页}
 \pagestyle{fancy}
 
 \hypersetup{colorlinks=true, urlcolor=blue}
 
 %\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
-\name{Yanjun Yang} % Your name\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{杨彦隽} % 姓名
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
-\address{yanjun.yang@ed.ac.uk} % Your email address
+\address{yanjun.yang@ed.ac.uk}
 \address{blog.yanaerobe.top}
-\address{+44 7960 011793} % Your phone number
+\address{+86 150 7499 5687/+44 7960 011793}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+\begin{rSection}{教育背景}
 
-\begin{rSection}{Education}
-
-	\begin{rSubsection}{The University of Edinburgh}{Sept, 2022 - present}{PhD Student in Engineering, IMNS}{Edinburgh, Scotland}
-		\item Supervisors: Dr Alex Serb, Prof Themis Prodromakis
-		\item Research theme: Cognitive processing system implementation based on associative memories
-		% \item Research theme: Cognitive processing system implementation based on graph databases
+	\begin{rSubsection}{The University of Edinburgh}{2022年9月 -- 至今}{PhD Student in Engineering, IMNS}{英国苏格兰爱丁堡}
+		\item 导师：Dr Alex Serb，Prof Themis Prodromakis
+		\item 研究方向：用于神经-符号混合智能的图数据库硬件加速架构
+		% \item 研究方向：基于图数据库的认知处理系统实现
 	\end{rSubsection}
 	
-	\begin{rSubsection}{Nanyang Technological University}{Aug, 2021 - Aug, 2022}{MSc (Electronics)}{Singapore}
-		\item Core units taken: Digital Integrated Circuit Design, Electromagnetic Compability Design, Genetic Algorithms and Machine Learning, Advanced Wafer Processing, Integrated Circuit Packaging
+	\begin{rSubsection}{Nanyang Technological University}{2021年8月 -- 2022年8月}{MSc (Electronics)}{新加坡}
+		\item 核心课程：Digital Integrated Circuit Design, Electromagnetic Compability Design, Genetic Algorithms and Machine Learning, Advanced Wafer Processing, Integrated Circuit Packaging
 	\end{rSubsection}
 
-	\begin{rSubsection}{Tongji University}{Sept, 2017 - July, 2021}{BEng. in Electronic Science and Technology}{Shanghai, China}
-		\item Core units taken: Design and Analysis of Digital Integrated Circuits, Computer Architecture, Principles for Design of Integrated Circuit Chips, Embedded Systems
+	\begin{rSubsection}{同济大学}{2017年9月 -- 2021年7月}{电子科学与技术工学学士}{中国上海}
+		\item 核心课程：数字集成电路设计与分析、计算机体系结构、集成电路芯片设计原理、嵌入式系统
 	\end{rSubsection}
 
 \end{rSection}
 
-\begin{rSection}{Current Projects}
+\begin{rSection}{当前项目}
 	
-	\begin{rSubsection}{ASOCA3-FPGA}{Jan, 2024 - present}{The University of Edinburgh}{PhD Sub-project}
-		\item Developing a next-gen graph database accelerator on FPGA integrated with NoC
-		\item Project leader in architecture and system design
+	\begin{rSubsection}{ASOCA3-FPGA}{2024年1月 -- 至今}{The University of Edinburgh}{博士子课题}
+		\item 开发新一代高性能 FPGA 图数据库加速器
+		\item 负责项目的体系结构与系统设计
 	\end{rSubsection}
 	
 \end{rSection}
 
-\begin{rSection}{Employment}
+\begin{rSection}{工作经历}
 	
-	\begin{rSubsection}{Research Assistant}{March, 2026 - Present}{The University of Edinburgh}{Edinburgh, Scotland}
-		\item Undertake research related to the development of the ATLAS sub-system within the broader environment of the ADIA2 project.
+	\begin{rSubsection}{Research Assistant}{2026年3月 -- 至今}{The University of Edinburgh}{英国苏格兰爱丁堡}
+		\item 在 ADIA2 项目整体环境下承担 ASOCA 初创项目开发相关研究工作
 	\end{rSubsection}
 	
-	\begin{rSubsection}{Teaching Assistant}{January, 2024 - February, 2026}{The University of Edinburgh}{Edinburgh, Scotland}
-		\item Tutoring, demonstrating and marking for multiple undergraduate courses. 
-
-\end{rSubsection}
+	\begin{rSubsection}{Teaching Assistant}{2024年1月 -- 2026年2月}{The University of Edinburgh}{英国苏格兰爱丁堡}
+		\item 为多门本科课程承担辅导、实验演示与批改工作
+	\end{rSubsection}
 	
 \end{rSection}
 
-\begin{rSection}{Publications}
+\newpage
+
+\begin{rSection}{论文发表}
 
 	% NOTE: WIP
-	\begin{rSubsection}{\textit{Views}: A Hardware-friendly Graph Database Architecture For Storing Semantic Information}{August, 2025}{Preprint \href{https://arxiv.org/abs/2508.18123}{[arXiv]}}{}
-		\item Authors: \textbf{Yanjun Yang}, Adrian Wheeldon, Yihan Pan, and Alex Serb
+	\begin{rSubsection}{\textit{Views}: A Hardware-friendly Graph Database Architecture For Storing Semantic Information}{2025年8月}{Preprint \href{https://arxiv.org/abs/2508.18123}{[arXiv]}}{}
+		\item 作者：\textbf{Yanjun Yang}、Adrian Wheeldon、Yihan Pan、Alex Serb
 	\end{rSubsection}
 	
 	% \begin{rSubsection}{ASOCA2: A Modular Graph Database Accelerator}{TODO}{IEEE Transactions on Circuits and Systems I: Regular Papers}{}
 	% 	\item Authors: Yihan Pan, \textbf{Yanjun Yang} (co-first author), Adrian Wheeldon, Khaled Humood, Mohammed Mughal, Grahame Reynolds, Themis Prodromakis, and Alexantrou Serb
 	% \end{rSubsection}
 	
-	\begin{rSubsection}{A Resource-efficient Dually-addressable Memory Architecture on FPGA}{May, 2025}{ISCAS 2025}{London, United Kingdom}
-		\item Authors: \textbf{Yanjun Yang}, Christos Giotis, Themis Prodromakis and Alex Serb
+	\begin{rSubsection}{A Resource-efficient Dually-addressable Memory Architecture on FPGA}{2025年5月}{ISCAS 2025}{英国伦敦}
+		\item 作者：\textbf{Yanjun Yang}、Christos Giotis、Themis Prodromakis、Alex Serb
 	\end{rSubsection}
 	
-	\begin{rSubsection}{A Modular Graph Database Accelerator}{September, 2024}{ECML PKDD 2024}{Vilnius, Lituania}
-	\item Authors: Yihan Pan, Adrian Wheeldon, \textbf{Yanjun Yang}, Khaled Humood, Mohammed Mughal, Grahame Reynolds, Themis Prodromakis, and Alexantrou Serb
-		% \item Introduced design of ASOCA2, a modular graph database accelerator
-	\end{rSubsection}
-	
-	% NOTE: undergrad
-	\begin{rSubsection}{A Single-layer Wideband Microwave Absorber with Reactive Screen, and\\A Novel Design of Microwave Absorber for Reduction of Radar\\Cross Section}{July, 2020}{AP-S/URSI 2020}{Montréal, Canada}
-		\item Carried out antenna simulation under HFSS and experimental data analyses
-		% \item Published two academic papers accepted by IEEE AP-S/URSI 2020 as the second author
-	\end{rSubsection}
-
-\end{rSection}
-
-\begin{rSection}{Research Experience}
-	
-	\begin{rSubsection}{Saliency detector}{Feb, 2024 - July, 2024}{The University of Edinburgh, STMicro}{PhD Sub-project}
-		\item Developed a hybrid defect detection and classfication prototype
-		\item Produced a result analysis and development report
-	\end{rSubsection}
-	
-	\begin{rSubsection}{ASOCat}{Sept, 2022 - Sept, 2025}{The University of Edinburgh}{PhD Sub-project}
-		\item Investigating to build a Copycat-based cognitive model compatible with an associative memory chip
-		\item Designed and implementing its software/hardware interface
-	\end{rSubsection}
-
-	\begin{rSubsection}{ASOCA2}{Nov, 2022 - Dec, 2023}{The University of Edinburgh}{PhD Sub-project}
-		\item Successful tape-out of a memristor-based associative memory SoC
-		\item Core digital hardware developer and verification engineer
-	\end{rSubsection}
-	
-	\begin{rSubsection}{ReMap: a Mitchell-based logarithmic conversion circuit}{Aug, 2021 - July, 2022}{Nanyang Technological University}{MSc Dissertation Project}
-		\item Optimised a Mitchell-based binary logarithmic approximation method
-		\item Implemented and evaluated corresponding integrated circuits
-	\end{rSubsection}
-
-	\begin{rSubsection}{Design of a hierarchical memory management mechanism}{Aug, 2021 - Jan, 2022}{Tongji University}{Part-time Internship}
-		\item Led a hierarchical SRAM-flash interface design with page replacement algorithm
-		\item Applied the design on an automobile-orientated MCU
+	\begin{rSubsection}{A Modular Graph Database Accelerator}{2024年9月}{ECML PKDD 2024}{立陶宛维尔纽斯}
+		\item 作者：Yihan Pan、Adrian Wheeldon、\textbf{Yanjun Yang}、Khaled Humood、Mohammed Mughal、Grahame Reynolds、Themis Prodromakis、Alexantrou Serb
+		% \item 介绍了模块化图数据库加速器 ASOCA2 的设计
 	\end{rSubsection}
 	
 	% NOTE: undergrad
-	\begin{rSubsection}{CoNM: Core of Normal Microarchitecture}{Mar, 2021 - Jun, 2021}{Tongji University}{Graduation Design}
-		\item Designed a four-stage RV32I CPU core with static branch prediction in Verilog
-		\item Implemented onto PYNQ-Z1 FPGA board for a successful verification
+	\begin{rSubsection}{A Single-layer Wideband Microwave Absorber with Reactive Screen, and\\A Novel Design of Microwave Absorber for Reduction of Radar\\Cross Section}{2020年7月}{AP-S/URSI 2020}{加拿大蒙特利尔}
+		\item 使用 HFSS 进行天线仿真，并开展实验数据分析
+		% \item 以第二作者身份发表两篇被 IEEE AP-S/URSI 2020 接收的学术论文
 	\end{rSubsection}
 
 \end{rSection}
 
-\begin{rSection}{Professional Skills}
-
-	% Familiar with both FPGA and digital ASIC design flows. 
+\begin{rSection}{研究经历}
 	
-	\begin{rSubsection}{Computer Languages}{}{}{}
-		\item Proficient in SystemVerilog/Verilog
-		\item Skilled in Bash, Tcl, Python
-		\item Competent in C/C++, VHDL
-		\item Developing skills in CHISEL
+	\begin{rSubsection}{Saliency detector}{2024年2月 -- 2024年7月}{The University of Edinburgh, STMicro}{博士子课题}
+		\item 开发混合式缺陷检测与分类原型
+		\item 产出结果分析与开发报告
+	\end{rSubsection}
+	
+	\begin{rSubsection}{ASOCat}{2022年9月 -- 2025年9月}{The University of Edinburgh}{博士子课题}
+		\item 探索构建兼容关联记忆芯片的 Copycat 认知模型
+		\item 设计并实现其软硬件接口
 	\end{rSubsection}
 
-	\begin{rSubsection}{Professional Software}{}{}{}
-		\item Skilled in Synopsys, Vivado, Cadence
-		\item Good command of MATLAB, ModelSim
-		\item Good knowledge of HFSS, ISE, Keil
+	\begin{rSubsection}{ASOCA2}{2022年11月 -- 2023年12月}{The University of Edinburgh}{博士子课题}
+		\item 完成基于忆阻器的关联记忆 SoC 流片
+		\item 担任核心数字硬件开发与验证工程师
+	\end{rSubsection}
+	
+	\begin{rSubsection}{ReMap: a Mitchell-based logarithmic conversion circuit}{2021年8月 -- 2022年7月}{Nanyang Technological University}{硕士论文项目}
+		\item 优化基于 Mitchell 算法的二进制对数近似方法
+		\item 实现并评估相应集成电路
 	\end{rSubsection}
 
-	\begin{rSubsection}{Languages}{}{Native in Mandarin and New Xiang, proficient in English}{}
-		\item IELTS 8.0/9.0 (2020), equivalent to CEFR level C1
-		\item Elementary proficiency of French
+	\begin{rSubsection}{分层存储管理机制设计}{2021年8月 -- 2022年1月}{同济大学}{兼职实习}
+		\item 主导带页面置换算法的分层 SRAM-flash 接口设计
+		\item 将设计应用于面向汽车的 MCU
+	\end{rSubsection}
+	
+	% NOTE: undergrad
+	\begin{rSubsection}{CoNM：普通微体系结构内核}{2021年3月 -- 2021年6月}{同济大学}{毕业设计}
+		\item 使用 Verilog 设计带静态分支预测的四级流水 RV32I CPU 内核
+		\item 在 PYNQ-Z1 FPGA 开发板上完成实现并成功验证
 	\end{rSubsection}
 
 \end{rSection}
 
-\begin{rSection}{Seminars \& Talks}
+\begin{rSection}{专业技能}
+
+	% 熟悉 FPGA 与数字 ASIC 设计流程。
 	
-	\begin{rSubsection}{IMNS Seminar}{November, 2024}{Institute for Integrated Micro and Nano Systems}{Edinburgh, Scotland}
-		\item Title: Graph Database Acceleration in Digital Hardware
+	\begin{rSubsection}{编程语言}{}{}{}
+		\item 精通 SystemVerilog/Verilog
+		\item 熟练使用 Bash、Tcl、Python
+		\item 掌握 C/C++、VHDL
 	\end{rSubsection}
-	
-	\begin{rSubsection}{PGR Conference}{April, 2024}{The University of Edinburgh}{Edinburgh, Scotland}
-		\item Title: Symbolic Processing Systems Based on Associative Memory
+
+	\begin{rSubsection}{专业软件}{}{}{}
+		\item 熟练使用 Synopsys、Vivado、Cadence设计流
+		\item 熟悉 MATLAB、ModelSim
+		\item 了解 HFSS、ISE、Keil
 	\end{rSubsection}
-	
+
+	\begin{rSubsection}{语言能力}{}{普通话与新湘语为母语，英语熟练}{}
+		\item IELTS 8.0/9.0（2020），相当于 CEFR C1 等级
+		\item 具备初级法语能力
+	\end{rSubsection}
+
 \end{rSection}
 
-\begin{rSection}{Teaching}
+\begin{rSection}{研讨会与报告}
 	
-	\begin{rSubsection}{The University of Edinburgh}{1st Semester, 2024}{}{}
-		\item Demonstrator - Digital Systems Design 2 (ELEE08015)
-		\item Marker - Software and Embedded Systems Laboratory 2 (ELEE08022)
-	\end{rSubsection}
-	
-	\begin{rSubsection}{The University of Edinburgh}{2nd Semester, 2024}{}{}
-		\item Demonstrator \& Marker - Digital Systems Laboratory 3 (ELEE09018)
+	\begin{rSubsection}{IMNS Seminar}{2024年11月}{Institute for Integrated Micro and Nano Systems}{英国苏格兰爱丁堡}
+		\item 题目：Graph Database Acceleration in Digital Hardware
 	\end{rSubsection}
 	
-	\begin{rSubsection}{The University of Edinburgh}{1st Semester, 2025}{}{}
-		\item Tutor \& Marker - Digital Systems Design 2 (ELEE08015)
-		\item Marker - Software and Embedded Systems Laboratory 2 (ELEE08022)
+	\begin{rSubsection}{PGR Conference}{2024年4月}{The University of Edinburgh}{英国苏格兰爱丁堡}
+		\item 题目：Symbolic Processing Systems Based on Associative Memory
 	\end{rSubsection}
 	
-\end{rSection}
-
-\begin{rSection}{Honours and Awards}
-	
-	\begin{rSubsection}{The University of Edinburgh}{Mar, 2022}{School of Engineering Studentship}{}
-		\item Full studentship for full-time PhD study
-	\end{rSubsection}
-		
-	\begin{rSubsection}{Tongji University}{1st Semester, 2017}{Advanced Summer Internship Individual}{}
-		\item Awarded for the great performance during summer internship
-	\end{rSubsection}
-		
-	\begin{rSubsection}{Tongji University}{1st Semester, 2019}{Outstanding Student Cadre}{}
-		\item Awarded as the minister of Rights and Welfare Department in Students' Union
-	\end{rSubsection}
-
 \end{rSection}
 
 \newpage
 
-\begin{rSection}{Interests}
-	\item Prefer \textit{Scotches}.
-	\item $\frac{1}{2}$ geek, $\frac{1}{2}$ bartender.
-	\item Neovim sponsor under WSL2.
-	\item Reads Kafka, Hai Zi, and Allan Poe.
-	\item Jay Chou, Green Day and Aska Yang fan. 
-	\item Minesweeper minesweeper. (Best time: 107.269s)
-	% \item Always planning to do some film criticism and lyric writing.
+\begin{rSection}{教学}
+	
+	\begin{rSubsection}{The University of Edinburgh}{2024年第一学期}{}{}
+		\item Demonstrator -- Digital Systems Design 2 (ELEE08015)
+		\item Marker -- Software and Embedded Systems Laboratory 2 (ELEE08022)
+	\end{rSubsection}
+	
+	\begin{rSubsection}{The University of Edinburgh}{2024年第二学期}{}{}
+		\item Demonstrator \& Marker -- Digital Systems Laboratory 3 (ELEE09018)
+	\end{rSubsection}
+	
+	\begin{rSubsection}{The University of Edinburgh}{2025年第一学期}{}{}
+		\item Tutor \& Marker -- Digital Systems Design 2 (ELEE08015)
+		\item Marker -- Software and Embedded Systems Laboratory 2 (ELEE08022)
+	\end{rSubsection}
+	
+\end{rSection}
+
+\begin{rSection}{荣誉与奖项}
+	
+	\begin{rSubsection}{The University of Edinburgh}{2022年3月}{School of Engineering Studentship}{}
+		\item 全额资助全日制博士研究
+	\end{rSubsection}
+		
+	\begin{rSubsection}{同济大学}{2017年第一学期}{暑期实践先进个人}{}
+		\item 因暑期实践表现优异获奖
+	\end{rSubsection}
+		
+	\begin{rSubsection}{同济大学}{2019年第一学期}{优秀学生干部}{}
+		\item 担任学生会权益部部长期间获评
+	\end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{兴趣爱好}
+	\item 偏爱苏格兰威士忌。
+	\item 半个 geek，半个 bartender。
+	\item WSL2 下的 Neovim sponsor。
+	\item 卡夫卡、海子与爱伦·坡。
+	\item 周杰伦、绿日与杨宗纬。
+	\item 扫雷玩家。（个人纪录：107.269 秒）
+	% \item 一直计划写一些影评和歌词。
 \end{rSection}
 
 \end{document}
