@@ -19,13 +19,17 @@
 
 \documentclass{resume}
 
-\usepackage[left=0.75in,top=0.5in,right=0.75in,bottom=0.5in]{geometry}
+\usepackage[left=0.5in,top=0.25in,right=0.5in,bottom=0.25in]{geometry}
 \usepackage[UTF8,fontset=none]{ctex}
 \setCJKmainfont[AutoFakeBold=2.5,AutoFakeSlant=0.2]{AR PL UMing CN}
 \setCJKsansfont[AutoFakeBold=2.5,AutoFakeSlant=0.2]{AR PL UMing CN}
 \setCJKmonofont{AR PL UMing CN}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
+
+\usepackage{setspace}
+\setstretch{0.95}
+
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
 % \fancyfoot[C]{第 \thepage 页}
@@ -45,34 +49,50 @@
 
 \begin{rSection}{教育背景}
 
-	\begin{rSubsection}{The University of Edinburgh}{2022年9月 -- 至今}{PhD Student in Engineering, IMNS}{英国苏格兰爱丁堡}
+	\begin{rSubsection}{The University of Edinburgh}{2022年9月 -- 至今}{PhD Candidate in Engineering, IMNS}{英国苏格兰爱丁堡}
 		\item 导师：Dr Alex Serb，Prof Themis Prodromakis
 		\item 研究方向：用于神经-符号混合智能的图数据库硬件加速架构
 		\item 爱丁堡大学全额奖学金
-		% \item 研究方向：基于图数据库的认知处理系统实现
 	\end{rSubsection}
 	
 	\begin{rSubsectionNoItems}{Nanyang Technological University}{2021年8月 -- 2022年8月}{MSc (Electronics)}{新加坡}
 	\end{rSubsectionNoItems}
 
-	\begin{rSubsectionNoItems}{同济大学}{2017年9月 -- 2021年7月}{电子科学与技术工学学士}{中国上海}
+	\begin{rSubsectionNoItems}{同济大学}{2017年9月 -- 2021年7月}{电子科学与技术 工学学士}{中国上海}
 	\end{rSubsectionNoItems}
 
 \end{rSection}
 
 \begin{rSection}{当前项目}
 	
-	\begin{rSubsection}{ASOCA3-FPGA}{2024年1月 -- 至今}{The University of Edinburgh}{博士子课题}
-		\item 开发新一代高性能 FPGA 图数据库加速器
-		\item 负责项目的体系结构与系统设计
+	\begin{rSubsection}{ASOCA3}{2024年1月 -- 至今}{The University of Edinburgh}{博士子课题}
+		\item 开发与迭代基于 FPGA 的高性能图数据库加速器 SoC
+		\item 主导体系结构与处理核微架构设计，结合Views图数据库模型开发并制定指令集规范
+		\item 协助开发基于ASOCA3的矢量数据库加速器及基于DRAM的双可寻址存储器设计
 	\end{rSubsection}
+	
+	\begin{rSubsection}{ASOCA Infrastructure Development Environment}{2025年11月 -- 至今}{The University of Edinburgh}{博士子课题}
+		\item 为ASOCA系列及衍生项目开发基础工具链、设计流程自动化与基于UVM的专有化系统验证环境
+		\item 基于 Neo4j 与 Memgraph 构建工作负载生成及性能对比工具，
+		\item 参与NoC/PCIe子系统的集成与验证
+	\end{rSubsection}
+	
+	\begin{rSubsection}{ATLAS}{2025年8月 -- 至今}{The University of Edinburgh}{初创项目}
+		\item 作为创始成员参与ASOCA初创项目ATLAS的筹备与孵化
+		\item 参与制定技术发展方向与商业化策略，提供技术支持与咨询
+	\end{rSubsection}
+	
+	% \begin{rSubsection}{ASOCA3-Family}{2025年8月 -- 至今}{The University of Edinburgh}{博士子课题}
+	% 	\item 参与NoC/PCIe子系统的集成与验证
+	% 	\item 指导与协助开发基于ASOCA3的矢量数据库加速器
+	% 	\item 指导与协助开发基于DRAM的双可寻址存储器设计
+	% \end{rSubsection}
 	
 \end{rSection}
 
 \begin{rSection}{论文发表}
 
-	% NOTE: WIP
-	\begin{rSubsectionNoItems}{\textit{Views}: A Hardware-friendly Graph Database Architecture For Storing Semantic Information}{2025年8月}{Preprint \href{https://arxiv.org/abs/2508.18123}{[arXiv]}}{}
+	\begin{rSubsectionNoItems}{\textit{Views}: A Hardware-friendly Graph Database Architecture For Storing\\Semantic Information}{2025年8月}{Preprint \href{https://arxiv.org/abs/2508.18123}{[arXiv]}}{}
 	\end{rSubsectionNoItems}
 	
 	% \begin{rSubsectionNoItems}{ASOCA2: A Modular Graph Database Accelerator}{TODO}{IEEE Transactions on Circuits and Systems I: Regular Papers}{}
@@ -81,7 +101,7 @@
 	\begin{rSubsectionNoItems}{A Resource-efficient Dually-addressable Memory Architecture on FPGA}{2025年5月}{ISCAS 2025}{英国伦敦}
 	\end{rSubsectionNoItems}
 	
-	\begin{rSubsectionNoItems}{A Modular Graph Database Accelerator}{2024年9月}{ECML PKDD 2024}{立陶宛维尔纽斯}
+	\begin{rSubsectionNoItems}{ASOCA2: A Modular Graph Database Accelerator}{2024年9月}{ECML/PKDD 2024}{立陶宛维尔纽斯}
 	\end{rSubsectionNoItems}
 	
 	% NOTE: undergrad
@@ -90,23 +110,31 @@
 
 \end{rSection}
 
+\newpage
+
 \begin{rSection}{研究经历}
 	
+	\begin{rSubsection}{FPGA Comms}{2024年6月 -- 2024年12月}{The University of Edinburgh}{博士子课题}
+		\item 参与FPGA器件选型，开发基于FPGA的数据传输与处理协议原型
+	\end{rSubsection}
+	
 	\begin{rSubsection}{Saliency detector}{2024年2月 -- 2024年7月}{The University of Edinburgh, STMicro}{博士子课题}
-		\item 开发混合式缺陷检测与分类原型
+		\item 开发基于混合式神经-符号智能的半导体缺陷检测与分类原型
 		\item 产出结果分析与开发报告
 	\end{rSubsection}
 	
-	\begin{rSubsection}{ASOCat}{2022年9月 -- 2025年9月}{The University of Edinburgh}{博士子课题}
-		\item 探索构建兼容关联记忆芯片的 Copycat 认知模型
-		\item 设计并实现其软硬件接口
-	\end{rSubsection}
-
 	\begin{rSubsection}{ASOCA2}{2022年11月 -- 2023年12月}{The University of Edinburgh}{博士子课题}
-		\item 完成基于忆阻器的关联记忆 SoC 流片
-		\item 担任核心数字硬件开发与验证工程师
+		\item 开发基于忆阻器双可寻址存储器阵列的可扩展图数据库加速器原型芯片 (ASOCA2)
+		\item 负责核心数字模块的 RTL 开发、功能验证及顶层集成
+		\item 参与综合与流片交付，并完成芯片上电、功能测试及评估
 	\end{rSubsection}
 	
+	\begin{rSubsection}{ASOCat}{2022年9月 -- 2024年1月}{The University of Edinburgh}{博士子课题}
+		\item 探索构建兼容关联记忆芯片的 Copycat 认知模型
+		\item 设计并实现图数据库存储方法及其软硬件接口
+		\item 探索程序性记忆及Lambda计算模型的硬件实现方法
+	\end{rSubsection}
+
 	\begin{rSubsection}{ReMap: a Mitchell-based logarithmic conversion circuit}{2021年8月 -- 2022年7月}{Nanyang Technological University}{硕士论文项目}
 		\item 优化基于 Mitchell 算法的二进制对数近似方法
 		\item 实现并评估相应集成电路
@@ -130,21 +158,21 @@
 	% 熟悉 FPGA 与数字 ASIC 设计流程
 	
 	\begin{rSubsection}{编程语言}{}{}{}
-		\item SystemVerilog/Verilog、Bash、Tcl、Python、C/C++、VHDL
+		\item SystemVerilog/Verilog、Bash、Tcl、Python、C/C++、VHDL等
 	\end{rSubsection}
 
 	\begin{rSubsection}{专业软件}{}{}{}
-		\item Synopsys、Vivado、Cadence、MATLAB、ModelSim、HFSS、ISE、Keil
+		\item Synopsys、Vivado、Cadence、MATLAB、ModelSim、HFSS、ISE、Keil等
 	\end{rSubsection}
 
-	\begin{rSubsection}{语言能力}{}{普通话与新湘语为母语}{}
+	\begin{rSubsection}{语言能力}{}{}{}
 		\item IELTS 8.0/9.0（2020）、具备初级法语能力
 	\end{rSubsection}
 
 \end{rSection}
 
 \begin{rSection}{兴趣爱好}
-	\item 苏格兰威士忌、geek，半个 bartender、WSL2 下的 Neovim sponsor、卡夫卡、海子与爱伦·坡、周杰伦、绿日与杨宗纬、扫雷玩家
+	\item 开源工具、文学、音乐、调酒与扫雷
 \end{rSection}
 
 \end{document}
