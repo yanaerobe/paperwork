@@ -57,19 +57,19 @@
 % \printaddress is used to style an address line (given as input)
 \def \printaddress #1{
   \begingroup
-    \def \\ {\addressSep\ }
-    \centerline{#1}
+    \parfillskip=0pt
+    \par\noindent\makebox[\textwidth][c]{#1}\par
   \endgroup
-  \par
   \addressskip
 }
 
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
+    \parfillskip=0pt
+    \par\noindent\makebox[\textwidth][c]{\MakeUppercase{\namesize\bfseries \@name}}\par
   \endgroup
+  \nameskip
 }
 
 %----------------------------------------------------------------------------------------
@@ -116,7 +116,7 @@
     \\
     {\itshape #3} \hfill {\itshape #4}%
   }%
-  \smallskip
+  \par\smallskip
 }
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
