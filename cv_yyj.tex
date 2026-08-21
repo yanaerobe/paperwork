@@ -1,183 +1,104 @@
 % !TEX program = xelatex
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
-% LaTeX Template
-% Version 2.0 (8/5/13)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Trey Hunner (http://www.treyhunner.com/)
-%
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring the
-% document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass{resume}
 
-\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.25in]{geometry}
+\usepackage[left=0.5in,top=0.45in,right=0.5in,bottom=0.25in]{geometry}
 \usepackage[UTF8,fontset=none]{ctex}
 \setCJKmainfont[AutoFakeBold=2.5,AutoFakeSlant=0.2]{AR PL UMing CN}
 \setCJKsansfont[AutoFakeBold=2.5,AutoFakeSlant=0.2]{AR PL UMing CN}
 \setCJKmonofont{AR PL UMing CN}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
-
 \usepackage{setspace}
-\setstretch{0.95}
 
+\setstretch{0.95}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
-% \fancyfoot[C]{第 \thepage 页}
 \pagestyle{fancy}
+\hypersetup{colorlinks=true,urlcolor=blue}
 
-\hypersetup{colorlinks=true, urlcolor=blue}
-
-%\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
-\name{杨彦隽} % 姓名
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-
-\address{yanjun.yang@ed.ac.uk}
-\address{blog.yanaerobe.top}
-\address{+86 150 7499 5687/+44 7960 011793}
+\name{杨彦隽}
+\address{\href{mailto:yanjun.yang@ed.ac.uk}{yanjun.yang@ed.ac.uk}\quad
+  \href{https://blog.yanaerobe.top}{blog.yanaerobe.top}}
+\address{+86 150 7499 5687\quad +44 7960 011793}
 
 \begin{document}
 
+\begin{rSection}{技术概述}
+  数字 IC/RTL 方向博士候选人，具备 accelerator/processor RTL、SystemVerilog/Verilog、
+  定制验证环境、FPGA implementation 与 180 nm ASIC 流片经验；专长于 datapath、control、pipeline 及 memory RTL。
+\end{rSection}
+
 \begin{rSection}{教育背景}
-
-	\begin{rSubsection}{The University of Edinburgh}{2022年9月 -- 至今}{PhD Candidate in Engineering, IMNS}{英国苏格兰爱丁堡}
-		\item 导师：Dr Alex Serb，Prof Themis Prodromakis
-		\item 研究方向：用于神经-符号混合智能的图数据库硬件加速架构
-		\item 爱丁堡大学工程学院全额奖学金
-	\end{rSubsection}
-	
-	\begin{rSubsectionNoItems}{Nanyang Technological University}{2021年8月 -- 2022年8月}{MSc (Electronics)}{新加坡}
-	\end{rSubsectionNoItems}
-
-	\begin{rSubsectionNoItems}{同济大学}{2017年9月 -- 2021年7月}{电子科学与技术 工学学士}{中国上海}
-	\end{rSubsectionNoItems}
-
+  \begin{rSubsection}{The University of Edinburgh}{2022年9月 -- 预计2026年11月}
+    {PhD Candidate in Engineering, IMNS}{英国爱丁堡}
+    \item 研究方向：面向符号智能与图工作负载的数字加速器；工程学院全额奖学金
+  \end{rSubsection}
+  \begin{rSubsectionNoItems}{Nanyang Technological University}{2021年8月 -- 2022年8月}
+    {MSc (Electronics)}{新加坡}
+  \end{rSubsectionNoItems}
+  \begin{rSubsectionNoItems}{同济大学}{2017年9月 -- 2021年7月}
+    {电子科学与技术 工学学士}{中国上海}
+  \end{rSubsectionNoItems}
 \end{rSection}
 
-\begin{rSection}{当前项目}
-	
-	\begin{rSubsection}{ASOCA3}{2024年1月 -- 至今}{The University of Edinburgh}{博士子课题}
-		\item 开发与迭代基于 FPGA 的高性能图数据库加速器 SoC
-		\item 主导体系结构与处理核微架构设计，结合图数据库模型开发并制定指令集规范
-		\item 协助开发基于ASOCA3的矢量数据库加速器及基于DRAM的双可寻址存储器设计
-	\end{rSubsection}
-	
-	\begin{rSubsection}{ASOCA Infrastructure Development Environment}{2025年11月 -- 至今}{The University of Edinburgh}{博士子课题}
-		\item 为ASOCA系列及衍生项目开发基础工具链、设计流程自动化与基于UVM的专有化系统验证环境
-		\item 基于 Neo4j 与 Memgraph 构建工作负载生成及性能对比工具
-		\item 参与NoC/PCIe子系统的集成与验证
-	\end{rSubsection}
-	
-	\begin{rSubsection}{ATLAS}{2025年8月 -- 至今}{The University of Edinburgh}{初创项目}
-		\item 作为创始成员参与ASOCA初创项目ATLAS的筹备与孵化
-		\item 参与制定技术发展方向与商业化策略，提供技术支持与咨询
-	\end{rSubsection}
-	
-	% \begin{rSubsection}{ASOCA3-Family}{2025年8月 -- 至今}{The University of Edinburgh}{博士子课题}
-	% 	\item 参与NoC/PCIe子系统的集成与验证
-	% 	\item 指导与协助开发基于ASOCA3的矢量数据库加速器
-	% 	\item 指导与协助开发基于DRAM的双可寻址存储器设计
-	% \end{rSubsection}
-	
-\end{rSection}
+\begin{rSection}{数字 IC / RTL 项目经历}
+  \begin{rSubsection}{ASOCA2：双可寻址近存图加速 ASIC}{2022年11月 -- 2023年12月}
+    {The University of Edinburgh}{180 nm ASIC 原型}
+    \item 迭代实现并验证 CTRL、BUF、ONECON、LOI、COMP 等数字模块，覆盖指令控制 FSM、数据缓冲、优先匹配、状态掩码及比较 datapath，并参与顶层集成
+    \item 主导 directed system-level testbench 与验证环境；56 个 testcases 覆盖十类指令及持续并发压力，VCS 中 48 个带结果检查的初始化/功能用例全部通过
+    \item 完成 hypercluster 级 scan-chain 集成与 backend verification，参与综合和流片交付；搭建硅后测试流程并排查数字 I/O/scan 边界信号衰减
+  \end{rSubsection}
 
-\begin{rSection}{论文发表}
+  \begin{rSubsection}{ASOCA3：复杂加速器处理核 RTL}{2024年1月 -- 至今}
+    {The University of Edinburgh}{FPGA accelerator system}
+    \item 独立设计 supercluster 处理核、六级执行流水及 RTL 控制结构，包含 instruction assembly/decode、memory、register read/writeback 与 NoC-facing read/write stages
+    \item 实现分布式 valid/ready 流控、pipeline registers、冒险检查、stall/flush、16 项双读单写寄存器堆，以及流水线与 RECONS 反馈路径间的 fixed-priority arbitration
+    \item 实现复合/谓词指令 RECONS 引擎与 packet reconstruction，定义 44-bit ASOCA64 flit 及 SC-side handshake；最终 NoC/PCIe 与顶层集成为团队系统背景
+  \end{rSubsection}
 
-	\begin{rSubsectionNoItems}{\textit{Views}: A Hardware-friendly Graph Database Architecture For Storing\\Semantic Information}{2025年8月}{Preprint \href{https://arxiv.org/abs/2508.18123}{[arXiv]}}{}
-	\end{rSubsectionNoItems}
-	
-	% \begin{rSubsectionNoItems}{ASOCA2: A Modular Graph Database Accelerator}{TODO}{IEEE Transactions on Circuits and Systems I: Regular Papers}{}
-	% \end{rSubsectionNoItems}
-	
-	\begin{rSubsectionNoItems}{A Resource-efficient Dually-addressable Memory Architecture on FPGA}{2025年5月}{ISCAS 2025}{英国伦敦}
-	\end{rSubsectionNoItems}
-	
-	\begin{rSubsectionNoItems}{ASOCA2: A Modular Graph Database Accelerator}{2024年9月}{ECML/PKDD 2024}{立陶宛维尔纽斯}
-	\end{rSubsectionNoItems}
-	
-	% NOTE: undergrad
-	\begin{rSubsectionNoItems}{A Single-layer Wideband Microwave Absorber with Reactive Screen, and\\A Novel Design of Microwave Absorber for Reduction of Radar\\Cross Section}{2020年7月}{AP-S/URSI 2020}{加拿大蒙特利尔}
-	\end{rSubsectionNoItems}
+  \newpage
 
-\end{rSection}
+  \begin{rSubsection}{ENGINE：可参数化双可寻址存储器 RTL}{2024年 -- 2025年}
+    {The University of Edinburgh}{独立设计与实现}
+    \item 独立完成 BRAM 双可寻址存储器的架构、RTL 与 FPGA implementation；实现 BROADCAST 译码、并行 RAMB 存储和 CARU/TURBO 内容匹配路径
+    \item 在 Virtex-7 上以 4 BRAM36、683 LUT、248 FF 实现 $8\times512\times36$ 配置，达到 129.27 MHz 与 100\% BRAM 存储效率，并在 Versal、Zynq、Virtex 系列验证
+  \end{rSubsection}
 
-\newpage
+  \begin{rSubsection}{AIDE：自动化设计流与定制验证环境}{2025年11月 -- 至今}
+    {The University of Edinburgh}{博士子课题}
+    \item 独立开发 Makefile 自动化 flow、ASOCA64 assembler/simulator 与 test-vector generation，扩展 Python reference model 生成 RTL expected results
+    \item 主导轻量化、UVM-inspired compliance environment，实现 input sequencer、output monitor、ID-based scoreboard、assertion capture、functional coverage 与仿真报告
+  \end{rSubsection}
 
-\begin{rSection}{研究经历}
-	
-	\begin{rSubsection}{Saliency detector}{2024年2月 -- 2024年7月}{The University of Edinburgh, STMicro}{博士子课题}
-		\item 开发基于混合式神经-符号智能的半导体缺陷检测与分类原型
-		\item 产出结果分析与开发报告
-	\end{rSubsection}
-	
-	\begin{rSubsection}{ASOCA2}{2022年11月 -- 2023年12月}{The University of Edinburgh}{博士子课题}
-		\item 开发基于忆阻器双可寻址存储器阵列的可扩展图数据库加速器原型芯片 (ASOCA2)
-		\item 负责核心数字模块的 RTL 开发、功能验证及顶层集成
-		\item 参与综合与流片交付，并完成芯片上电、功能测试及评估
-	\end{rSubsection}
-	
-	\begin{rSubsection}{ASOCat}{2022年9月 -- 2024年1月}{The University of Edinburgh}{博士子课题}
-		\item 探索构建兼容关联记忆芯片的 Copycat 认知模型
-		\item 设计并实现图数据库存储方法及其软硬件接口
-		\item 探索程序性记忆及Lambda计算模型的硬件实现方法
-	\end{rSubsection}
-
-	\begin{rSubsection}{ReMap: a Mitchell-based logarithmic conversion circuit}{2021年8月 -- 2022年7月}{Nanyang Technological University}{硕士论文项目}
-		\item 优化基于 Mitchell 算法的二进制对数近似计算方法
-		\item 实现并评估相应集成电路
-	\end{rSubsection}
-
-	\begin{rSubsection}{分层存储管理机制设计}{2021年8月 -- 2022年1月}{同济大学}{兼职实习}
-		\item 主导带页面置换算法的分层 SRAM-flash 接口设计
-		\item 将设计应用于面向汽车的 MCU
-	\end{rSubsection}
-	
-	% NOTE: undergrad
-	\begin{rSubsection}{CoNM：规范微体系结构内核}{2021年3月 -- 2021年6月}{同济大学}{毕业设计}
-		\item 使用 Verilog 设计带静态分支预测的四级流水 RV32I CPU 内核
-		\item 在 PYNQ-Z1 FPGA 开发板上完成实现并成功验证
-	\end{rSubsection}
-
+  \begin{rSubsection}{CoNM：四级流水 RV32I 处理器 RTL}{2021年3月 -- 2021年6月}
+    {同济大学}{本科毕业设计}
+    \item 使用 Verilog 完成带静态分支预测的四级流水 RV32I CPU 内核设计
+    \item 在 PYNQ-Z1 FPGA 开发板完成综合实现与功能验证
+  \end{rSubsection}
 \end{rSection}
 
 \begin{rSection}{专业技能}
-
-	% 熟悉 FPGA 与数字 ASIC 设计流程
-	
-	\begin{rSubsection}{硬件设计}{}{}{}
-		\item SystemVerilog/Verilog、SVA、UVM、功能验证
-		\item 参加Europractice先进制程数字IC设计培训课程，熟悉高性能低功耗设计
-	\end{rSubsection}
-
-	\begin{rSubsection}{EDA}{}{}{}
-		\item Synopsys、Vivado、Cadence、ModelSim
-	\end{rSubsection}
-
-	\begin{rSubsection}{脚本与软件}{}{}{}
-		\item Python、Git、(Neo)vim、Bash、Tcl、C/C++
-	\end{rSubsection}
-
-	\begin{rSubsection}{体系结构}{}{}{}
-		\item RISC-V、Graph Database、算术电路、神经-符号混合智能、存储系统
-	\end{rSubsection}
-
-	\begin{rSubsection}{语言能力}{}{}{}
-		\item IELTS 8.0/9.0（2020）、具备初级法语能力
-	\end{rSubsection}
-
+  \begin{rSubsection}{RTL}{}{}{}
+    \item SystemVerilog/Verilog；processor/accelerator datapath、control/FSM、pipeline、register file、memory RTL
+  \end{rSubsection}
+  \begin{rSubsection}{Verification}{}{}{}
+    \item Directed testbench、assertion/coverage、sequencer、monitor、scoreboard、reference model、仿真自动化
+  \end{rSubsection}
+  \begin{rSubsection}{Implementation 与接口}{}{}{}
+    \item Vivado FPGA synthesis/implementation；ASIC synthesis/tapeout collaboration、scan integration、post-silicon debug；NoC flit/handshake、PCIe/AXI-Lite system context
+  \end{rSubsection}
+  \begin{rSubsection}{工具与编程}{}{}{}
+    \item VCS、Vivado、ModelSim；Python、C/C++、Bash、Tcl、Git
+  \end{rSubsection}
 \end{rSection}
 
-\begin{rSection}{兴趣爱好}
-	\item 文学、开源工具、流行/朋克音乐、调酒与扫雷
+\begin{rSection}{代表性论文}
+  \begin{rSubsectionNoItems}{A Resource-efficient Dually-addressable Memory Architecture on FPGA}
+    {2025}{ISCAS}{Memory RTL / FPGA implementation}
+  \end{rSubsectionNoItems}
+  \begin{rSubsectionNoItems}{A Modular Graph Database Accelerator}
+    {2024}{ECML PKDD}{Accelerator ASIC / associative memory}
+  \end{rSubsectionNoItems}
 \end{rSection}
 
 \end{document}
