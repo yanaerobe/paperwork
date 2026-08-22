@@ -1,7 +1,7 @@
 % !TEX program = xelatex
 \documentclass{resume}
 
-\usepackage[left=0.5in,top=0.45in,right=0.5in,bottom=0.25in]{geometry}
+\usepackage[left=17mm,right=17mm,top=14mm,bottom=15mm]{geometry}
 \usepackage[UTF8,fontset=none]{ctex}
 \setCJKmainfont[AutoFakeBold=2.5,AutoFakeSlant=0.2]{AR PL UMing CN}
 \setCJKsansfont[AutoFakeBold=2.5,AutoFakeSlant=0.2]{AR PL UMing CN}
@@ -10,93 +10,120 @@
 \usepackage{fancyhdr}
 \usepackage{setspace}
 
-\setstretch{0.95}
+\setstretch{1.05}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
+\fancyfoot{}
 \pagestyle{fancy}
 \hypersetup{colorlinks=true,urlcolor=blue}
 
 \name{杨彦隽}
 \address{\href{mailto:yanjun.yang@ed.ac.uk}{yanjun.yang@ed.ac.uk}\quad
-  \href{https://blog.yanaerobe.top}{blog.yanaerobe.top}}
-\address{+86 150 7499 5687\quad +44 7960 011793}
+  \href{https://blog.yanaerobe.top}{blog.yanaerobe.top}\quad
+  +86 150 7499 5687\quad +44 7960 011793}
 
 \begin{document}
 
-\begin{rSection}{技术概述}
-  专用加速器与处理器微架构博士候选人；聚焦定制 ISA、流水处理核、双可寻址存储器、
-  FPGA/ASIC 原型及软硬件协同，具备从架构定义、RTL 实现到验证与性能分析的完整经验。
-\end{rSection}
+\begin{center}
+  芯片体系结构｜专用加速器｜处理器微架构｜软硬件协同
+\end{center}
 
 \begin{rSection}{教育背景}
-  \begin{rSubsection}{The University of Edinburgh}{2022年9月 -- 预计2026年11月}
-    {PhD Candidate in Engineering, IMNS}{英国爱丁堡}
+  \begin{rSubsection}{爱丁堡大学}{2022年9月 -- 预计2026年11月}
+    {工程学博士候选人}{英国爱丁堡}
     \item 研究方向：面向符号智能与图工作负载的专用硬件架构；工程学院全额奖学金
   \end{rSubsection}
-  \begin{rSubsectionNoItems}{Nanyang Technological University}{2021年8月 -- 2022年8月}
-    {MSc (Electronics)}{新加坡}
+  \begin{rSubsectionNoItems}{南洋理工大学}{2021年8月 -- 2022年8月}
+    {电子学硕士}{新加坡}
   \end{rSubsectionNoItems}
   \begin{rSubsectionNoItems}{同济大学}{2017年9月 -- 2021年7月}
     {电子科学与技术 工学学士}{中国上海}
   \end{rSubsectionNoItems}
 \end{rSection}
 
-\begin{rSection}{核心项目与研究经历}
-  \begin{rSubsection}{ASOCA3：FPGA 图数据库加速系统}{2024年1月 -- 至今}
-    {The University of Edinburgh}{博士核心课题}
-    \item 主导系统架构与 ASOCA64 定制 ISA，定义 44-bit flit、模块化指令封装、寄存器模型及处理核到 NoC 的流量与握手接口
-    \item 独立设计 supercluster 处理核、六级执行流水与控制架构，实现 valid/ready 背压、冒险检查、stall/flush 及 16 项双读单写寄存器堆
-    \item 设计独立 RECONS 重构引擎，对跨流水级的复合/谓词操作进行 late binding 与路由分类，支持反馈执行、空结果抑制及跨核转发
+\begin{rSection}{项目经历}
+  \begin{rSubsection}{ASOCA3：FPGA 图数据库加速器}{2024年1月 -- 至今}
+    {爱丁堡大学}{博士核心课题}
+    \item 主导加速器体系结构与处理核微架构设计，制定面向图数据库操作的专用指令体系
+    \item 设计多级流水处理核，组织指令执行、存储访问及复合图操作
+    \item 定义处理核与片上互联的通信接口，支持系统扩展、FPGA 集成与软硬件协同
   \end{rSubsection}
 
-  \begin{rSubsection}{ENGINE：可重构 FPGA 双可寻址存储器}{2024年 -- 2025年}
-    {The University of Edinburgh}{独立设计与实现}
-    \item 提出并完成 BRAM-based dually-addressable memory 的架构、RTL、FPGA 实现与评估，以 array/page/RAMB 映射同时支持地址与内容寻址且无需复制数据
-    \item 在 Virtex-7 上以 4 BRAM36、683 LUT、248 FF 实现 $8\times512\times36$ 存储，达到 129.27 MHz 与 100\% BRAM 存储效率；在 UltraScale+ 上验证 302 实例、约 124 万 entries
+  \begin{rSubsection}{资源高效型 FPGA 双可寻址存储器}{2024年 -- 2025年}
+    {爱丁堡大学}{独立设计与实现}
+    \item 独立提出并实现存储器架构，在同一存储空间支持按地址访问和按内容检索，无需复制数据
+    \item 优化片上存储映射与并行查找，达到 100\% 块存储资源利用率
+    \item 完成 RTL 与 FPGA 实现，并在多类器件上验证架构的可扩展性
   \end{rSubsection}
 
-  \newpage
-
-  \begin{rSubsection}{ASOCA2：双可寻址近存图加速 ASIC}{2022年11月 -- 2023年12月}
-    {The University of Edinburgh}{博士子课题}
-    \item 主导 \textit{Views} 数据映射、ISA 与 hypercluster 架构，参与 CTRL、BUF、ONECON、LOI、COMP 等数字外设的多版 RTL、集成与验证
-    \item 参与 180 nm 原型芯片综合与流片交付，主导顶层验证及硅后测试与故障分析；硅前 48 项指令/初始化检查全部通过，硅后发现数字 I/O/scan 边界信号衰减
+  \begin{rSubsection}{ASOCA2：近存图数据库加速芯片}{2022年11月 -- 2023年12月}
+    {爱丁堡大学}{博士子课题}
+    \item 主导图数据映射、专用指令体系与分层架构设计，构建基于双可寻址存储器的近存加速器
+    \item 参与 180 nm 原型芯片的综合与流片交付，主导系统验证、芯片测试流程搭建及结果分析
   \end{rSubsection}
 
-  \begin{rSubsection}{AIDE：架构开发、验证与评估基础设施}{2025年11月 -- 至今}
-    {The University of Edinburgh}{博士子课题}
-    \item 独立开发 Makefile 自动化设计流、ASOCA64 assembler/simulator，并扩展 Python 行为模型以覆盖 traffic、register 与 instruction reconstruction
-    \item 主导定制 compliance 环境，以 sequencer、monitor、scoreboard 和 functional coverage 验证 RTL；设计 Neo4j 对比方法与工作负载分析流程
+  \begin{rSubsection}{ASOCA 开发与验证基础设施}{2025年11月 -- 至今}
+    {爱丁堡大学}{博士子课题}
+    \item 开发自动化构建、仿真与验证流程，并扩展行为参考模型和测试向量生成工具
+    \item 构建图数据库工作负载与性能对比流程，用于分析系统行为并辅助体系结构评估
   \end{rSubsection}
 
-  \begin{rSubsection}{CoNM：四级流水 RV32I 处理器}{2021年3月 -- 2021年6月}
+  \begin{rSubsection}{ReMap：二进制对数近似电路}{2021年8月 -- 2022年7月}
+    {南洋理工大学}{硕士论文项目}
+    \item 优化基于 Mitchell 算法的二进制对数近似方法，设计相应算术电路
+    \item 完成电路实现，评估计算精度与硬件开销之间的权衡
+  \end{rSubsection}
+
+  \begin{rSubsection}{半导体缺陷检测原型}{2024年2月 -- 2024年7月}
+    {爱丁堡大学、意法半导体}{博士子课题}
+    \item 开发混合神经—符号半导体缺陷检测与分类原型
+    \item 完成原型测试、结果分析与开发报告
+  \end{rSubsection}
+
+  \begin{rSubsection}{ASOCat：关联记忆软硬件协同}{2022年9月 -- 2024年1月}
+    {爱丁堡大学}{博士子课题}
+    \item 探索面向关联记忆芯片的认知计算模型
+    \item 设计图数据存储方法及软硬件接口
+  \end{rSubsection}
+
+  \begin{rSubsection}{CoNM：四级流水 RISC-V 处理器}{2021年3月 -- 2021年6月}
     {同济大学}{本科毕业设计}
-    \item 使用 Verilog 设计带静态分支预测的四级流水 RV32I CPU 内核
+    \item 使用 Verilog 设计带静态分支预测的四级流水 RV32I 处理器
     \item 在 PYNQ-Z1 FPGA 开发板完成综合实现与功能验证
+  \end{rSubsection}
+
+  \begin{rSubsection}{分层存储管理机制设计}{2021年8月 -- 2022年1月}
+    {同济大学}{兼职实习}
+    \item 主导带页面置换算法的分层 SRAM--Flash 接口设计
+    \item 将设计应用于车用微控制器
   \end{rSubsection}
 \end{rSection}
 
 \begin{rSection}{专业技能}
   \begin{rSubsection}{体系结构}{}{}{}
-    \item Processor/accelerator microarchitecture、ISA、pipeline、memory architecture、NoC traffic/interface、hardware-software co-design
+    \item 处理器微架构、专用指令体系、加速器架构、存储体系、片上互联、软硬件协同
   \end{rSubsection}
-  \begin{rSubsection}{硬件与验证}{}{}{}
-    \item SystemVerilog/Verilog、RTL design、assertion-based verification、custom compliance、FPGA/ASIC prototyping
+  \begin{rSubsection}{硬件设计与验证}{}{}{}
+    \item SystemVerilog/Verilog、流水线与数据通路设计、FPGA/ASIC 原型、功能验证
+    \item 完成先进制程数字集成电路设计培训，涵盖高性能与低功耗设计方法
   \end{rSubsection}
   \begin{rSubsection}{工具与编程}{}{}{}
-    \item Vivado、VCS、ModelSim；Python、C/C++、Bash、Tcl、Git
+    \item Vivado、VCS、ModelSim、Synopsys、Cadence；Python、C/C++、Bash、Tcl、Git
+  \end{rSubsection}
+  \begin{rSubsection}{语言能力}{}{}{}
+    \item 英语（IELTS 8.0/9.0）、初级法语
   \end{rSubsection}
 \end{rSection}
 
 \begin{rSection}{代表性论文}
-  \begin{rSubsectionNoItems}{\textit{Views}: A Hardware-friendly Graph Database Model For Storing Semantic Information}
-    {2025}{arXiv preprint}{Graph representation / accelerator architecture}
+  \begin{rSubsectionNoItems}{Views: A Hardware-friendly Graph Database Model For Storing\\Semantic Information}
+    {2025年}{预印本}{ }
   \end{rSubsectionNoItems}
   \begin{rSubsectionNoItems}{A Resource-efficient Dually-addressable Memory Architecture on FPGA}
-    {2025}{ISCAS}{Dually-addressable memory / FPGA}
+    {2025年}{ISCAS 2025}{ }
   \end{rSubsectionNoItems}
   \begin{rSubsectionNoItems}{A Modular Graph Database Accelerator}
-    {2024}{ECML PKDD}{Associative-memory accelerator / ASIC}
+    {2024年}{ECML PKDD 2024}{ }
   \end{rSubsectionNoItems}
 \end{rSection}
 
